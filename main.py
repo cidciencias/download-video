@@ -1,5 +1,11 @@
-from pytube import YouTube
 import tkinter as tk
+import logic as lg
+
+# Function for the button
+def on_download_click():
+    link = video_link.get()
+    lg.download_video(link)
+
 
 # Create the main window
 screen = tk.Tk()
@@ -13,7 +19,7 @@ label_text.set("Link do Video: ")
 # Create the label widget
 label = tk.Label(screen,
                  textvariable=label_text,
-                 font=("Arial", 12),
+                 font=("Arial", 14),
                  fg="black",
                  anchor="w"
                  )
@@ -40,7 +46,7 @@ button = tk.Button(screen,
                    bg="green",
                    height=2,
                    width=15,
-                   command=
+                   command=on_download_click
                    )
 
 # Pack the widgets into the window
