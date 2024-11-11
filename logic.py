@@ -22,7 +22,8 @@ def check_link(link):
 
 def download_video(link):
     if not check_link(link):
-        return # Jumps out if the link is not valid
+        return  # Jumps out if the link is not valid
+    print("Link válido, iniciando o download:", link)
 
     try:
         # Define the download path to "Downloads" folder

@@ -1,5 +1,7 @@
 import tkinter as tk
 import logic as lg
+import threading
+
 
 # Function for the button
 def on_download_click():
